@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AirLines</title>
+<meta charset="utf-8">
+    {% load static %}
+<link rel="stylesheet" href="{% static "css/reset.css" %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static "css/layout.css"%}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static "css/style.css"%}" type="text/css" media="all">
+<script type="text/javascript" src="{% static "js/jquery-1.5.2.js"%}" ></script>
+<script type="text/javascript" src="{% static "js/cufon-yui.js"%}"></script>
+<script type="text/javascript" src="{% static "js/cufon-replace.js"%}"></script>
+<script type="text/javascript" src="{% static "js/Cabin_400.font.js"%}"></script>
+<script type="text/javascript" src="{% static "js/tabs.js"%}"></script>
+<script type="text/javascript" src="{% static "js/jquery.jqtransform.js"%}" ></script>
+<script type="text/javascript" src="{% static "js/jquery.nivo.slider.pack.js"%}"></script>
+<script type="text/javascript" src="{% static "js/atooltip.jquery.js"%}"></script>
+<script type="text/javascript" src="{% static "js/script.js"%}"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script>
+$(document).ready(function() {
+    $('.datepicker').datepicker();
+});
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/html5.js"></script>
+<style type="text/css">.main, .tabs ul.nav a, .content, .button1, .box1, .top { behavior:url("../js/PIE.htc")}</style>
+<![endif]-->
+</head>
+<body id="page1">
+<div class="main">
+  <!--header -->
+  <header>
+    <div class="wrapper">
+      <h1><a href="index.html" id="logo">AirLines</a></h1>
+      <span id="slogan">Fast, Frequent &amp; Safe Flights</span>
+      <nav id="top_nav">
+        <ul>
+          <li><a href="index.html" class="nav1">Home</a></li>
+          <li><a href="#" class="nav2">Sitemap</a></li>
+          <li><a href="contacts.html" class="nav3">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <!-- / header -->
+  <!--content -->
+  <section id="content">
+    <div class="for_banners">
+      <article class="col1">
+        <div class="tabs">
+          <ul class="nav">
+            <li class="selected"><a href="#Flight">Flight</a></li>
+          </ul>
+          <div class="content">
+            <div class="tab-content" id="Flight">
+              <form id="form_1" action="#" method="post">
+                <div>
+                  <div class="radio">
+                    <div class="wrapper">
+
+                       </div>
+                  </div>
+                  <span class="row"> <span class="left">From</span>
+                    <input type="text" class="input">
+                  </span>
+                  <span class="row"> <span class="left">To</span>
+                    <input type="text" class="input">
+                  </span>
+<br><br><br>
+                    <span class="row"> <span class="left">Outbound</span>
+                        <input type="text" class="input1" value="03.05.2011"  onblur="if(this.value=='') this.value='03.05.2011'" onFocus="if(this.value =='03.05.2011' ) this.value=''">
+                      </span>
+                      <span class="row"> <span class="left">Return</span>
+                        <input type="text" class="input1" value="10.05.2011"  onblur="if(this.value=='') this.value='10.05.2011'" onFocus="if(this.value =='10.05.2011' ) this.value=''">
+                      </span>
+<br><br><br>
+                  <span class="row"> <span class="left">Adults</span>
+                    <input type="text" class="input2" value="2"  onblur="if(this.value=='') this.value='2'" onFocus="if(this.value =='2' ) this.value=''">
+                  </span>
+                  <span class="row"> <span class="left">Children</span>
+                    <input type="text" class="input2" value="0"  onblur="if(this.value=='') this.value='0'" onFocus="if(this.value =='0' ) this.value=''">
+                    <span class="left">(0-11 years)</span> </span>
+<br><br><br>
+                  <div class="wrapper"> <span class="right relative"><a href="/searchresults" class="button1"><strong>Search</strong></a></span>  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!--content end-->
+  <!--footer -->
+  <footer>
+    <div class="wrapper">
+      <ul id="icons">
+        <li><a href="#" class="normaltip"><img src="{% static "images/icon1.jpg"%}" alt=""></a></li>
+        <li><a href="#" class="normaltip"><img src="{% static "images/icon2.jpg"%}" alt=""></a></li>
+        <li><a href="#" class="normaltip"><img src="{% static "images/icon3.jpg"%}" alt=""></a></li>
+        <li><a href="#" class="normaltip"><img src="{% static "images/icon4.jpg"%}" alt=""></a></li>
+        <li><a href="#" class="normaltip"><img src="{% static "images/icon5.jpg"%}" alt=""></a></li>
+        <li><a href="#" class="normaltip"><img src="{% static "images/icon6.jpg"%}" alt=""></a></li>
+      </ul>
+    </div>
+  </footer>
+  <!--footer end-->
+</div>
+<script type="text/javascript">Cufon.now();</script>
+<script type="text/javascript">
+$(document).ready(function () {
+    tabs.init();
+});
+jQuery(document).ready(function ($) {
+    $('#form_1, #form_2, #form_3').jqTransform({
+        imgPath: 'jqtransformplugin/img/'
+    });
+});
+$(window).load(function () {
+    $('#slider').nivoSlider({
+        effect: 'fade', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft'
+        slices: 15,
+        animSpeed: 500,
+        pauseTime: 6000,
+        startSlide: 0, //Set starting Slide (0 index)
+        directionNav: false, //Next & Prev
+        directionNavHide: false, //Only show on hover
+        controlNav: false, //1,2,3...
+        controlNavThumbs: false, //Use thumbnails for Control Nav
+        controlNavThumbsFromRel: false, //Use image rel for thumbs
+        controlNavThumbsSearch: '.jpg', //Replace this with...
+        controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+        keyboardNav: true, //Use left & right arrows
+        pauseOnHover: true, //Stop animation while hovering
+        manualAdvance: false, //Force manual transitions
+        captionOpacity: 1, //Universal caption opacity
+        beforeChange: function () {},
+        afterChange: function () {},
+        slideshowEnd: function () {} //Triggers after all slides have been shown
+    });
+});
+</script>
+</body>
+</html>
